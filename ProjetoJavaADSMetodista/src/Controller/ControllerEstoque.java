@@ -1,14 +1,17 @@
 package Controller;
 
+import java.util.ArrayList;
+
 import Model.ModelProduto;
 
 public class ControllerEstoque {
 
-	ModelProduto produto = new ModelProduto();
+	ArrayList<ModelProduto> estoque = new ArrayList<>();
 
-	public void addProduto(int number) {
+	public void addProduto(int id, String name, int saldo) {
 
-		System.out.println("metódo para adicionar produto");
+		estoque.add(new ModelProduto(id, name, saldo));
+
 	}
 
 	public void removeProduto(int number) {
@@ -25,13 +28,10 @@ public class ControllerEstoque {
 
 	public void mostrarEstoque() {
 
-		System.out.println("metódo mostrar estoque atual");
-
-	}
-
-	public void addNovoProduto(Object newProduto) {
-
-		System.out.println("metódo mostrar estoque atual");
+		for (ModelProduto produtos : estoque) {
+			System.out.println("\n================================" + "\nid: " + produtos.getId() + "\nProduto: "
+					+ produtos.getName() + "\nSaldo: " + produtos.getSaldo() + "\n================================");
+		}
 
 	}
 

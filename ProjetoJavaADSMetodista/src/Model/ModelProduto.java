@@ -6,8 +6,12 @@ public class ModelProduto {
 	private String name;
 	private int saldo;
 
-	public ModelProduto() {
+	public ModelProduto(int id, String name, int saldo) {
 		// TODO Auto-generated constructor stub
+		this.id = id;
+		this.name = name;
+		this.saldo = saldo;
+
 	}
 
 	public int getId() {
