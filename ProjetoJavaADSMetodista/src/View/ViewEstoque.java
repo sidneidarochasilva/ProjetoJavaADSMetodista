@@ -45,7 +45,7 @@ public class ViewEstoque {
 		System.out.printf("REMOVA UM PRODUTO POR ID");
 		id = lerDados.nextInt();
 		produto.removeProduto(id);
-
+		lerDados.close();
 	}
 
 }
