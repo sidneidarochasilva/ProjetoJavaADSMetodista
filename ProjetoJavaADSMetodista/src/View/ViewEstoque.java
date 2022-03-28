@@ -9,7 +9,6 @@ public class ViewEstoque {
 	public static void main(String[] args) {
 
 		ControllerEstoque produto = new ControllerEstoque();
-		
 
 		Scanner lerDados = new Scanner(System.in);
 
@@ -38,10 +37,14 @@ public class ViewEstoque {
 
 		System.out.printf("Informe a quantidade que será estocada");
 		saldo = lerDados.nextInt();
-		
+
 		produto.addProduto(id, name, saldo);
-		
+
 		produto.mostrarEstoque();
+
+		System.out.printf("REMOVA UM PRODUTO POR ID");
+		id = lerDados.nextInt();
+		produto.removeProduto(id);
 
 	}
 

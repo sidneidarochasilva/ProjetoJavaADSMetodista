@@ -14,16 +14,21 @@ public class ControllerEstoque {
 
 	}
 
-	public void removeProduto(int number) {
+	public void removeProduto(int id) {
 
-		System.out.println("metódo para remover produto");
+		estoque.removeIf(estoque -> estoque.getId() == id);
+
+		for (ModelProduto produtos : estoque) {
+			System.out.println("\nESTOQUE ATUAL" + "\n================================" + "\nid: " + produtos.getId()
+					+ "\nProduto: " + produtos.getName() + "\nSaldo: " + produtos.getSaldo()
+					+ "\n================================");
+		}
 
 	}
 
 	public void updateProduto() {
 
 		System.out.println("metódo atualizar estoque");
-
 	}
 
 	public void mostrarEstoque() {
