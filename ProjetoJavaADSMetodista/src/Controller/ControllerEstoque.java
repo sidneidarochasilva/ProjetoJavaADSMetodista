@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import Model.ModelProduto;
 
 public class ControllerEstoque {
-
+//Teste Sinc
 	ArrayList<ModelProduto> estoque = new ArrayList<>();
 
 	public void addProduto(int id, String name, int saldo) {
@@ -32,7 +32,7 @@ public class ControllerEstoque {
 
 	public void adicionarSaldo() {
 
-		System.out.println("metódo atualizar estoque");
+		System.out.println("metï¿½do atualizar estoque");
 	}
 
 	public void removerSaldo(int id) {
