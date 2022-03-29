@@ -25,10 +25,19 @@ public class ControllerEstoque {
 		}
 
 	}
+	
+	public void renomear() {
+		System.out.println("atualizar nome");
+	}
 
-	public void updateProduto() {
+	public void adicionarSaldo() {
 
 		System.out.println("metódo atualizar estoque");
+	}
+
+	public void removerSaldo(int id) {
+
+		System.out.println("metódo remove estoque");
 	}
 
 	public void mostrarEstoque() {
