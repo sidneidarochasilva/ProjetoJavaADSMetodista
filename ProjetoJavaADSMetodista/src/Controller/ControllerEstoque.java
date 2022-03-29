@@ -25,9 +25,9 @@ public class ControllerEstoque {
 		}
 
 	}
-	
+
 	public void renomear() {
-		System.out.println("atualizar nome");
+		System.out.println("atualizar");
 	}
 
 	public void adicionarSaldo() {
