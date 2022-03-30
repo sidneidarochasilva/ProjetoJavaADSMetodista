@@ -32,12 +32,12 @@ public class ControllerEstoque {
 
 	public void adicionarSaldo() {
 
-		System.out.println("metï¿½do atualizar estoque");
+		System.out.println("metodo atualizar estoque");
 	}
 
 	public void removerSaldo(int id) {
 
-		System.out.println("metódo remove estoque");
+		System.out.println("metï¿½do remove estoque");
 	}
 
 	public void mostrarEstoque() {
