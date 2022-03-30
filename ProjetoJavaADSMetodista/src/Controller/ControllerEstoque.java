@@ -30,14 +30,51 @@ public class ControllerEstoque {
 		System.out.println("atualizar");
 	}
 
-	public void adicionarSaldo() {
+	public void adicionarSaldo(int id, int saldo) {
 
-		System.out.println("metodo atualizar estoque");
+		if (estoque.size() == 0) {
+			System.out.println("Não existe produtos cadastrados!");
+		} else {
+			System.out.println("Produto não localizado tente novamente");
+		}
+
+		for (ModelProduto produtos : estoque) {
+			if (produtos.getId() == id) {
+
+				int newSaldo = produtos.getSaldo() + saldo;
+
+				produtos.setSaldo(newSaldo);
+				System.out.println("\n================================" + "\nSaldo atual" + "\nid: " + produtos.getId()
+						+ "\nProduto: " + produtos.getName() + "\nSaldo: " + produtos.getSaldo()
+						+ "\n================================");
+
+			}
+
+		}
+
 	}
 
-	public void removerSaldo(int id) {
+	public void removerSaldo(int id, int saldo) {
 
-		System.out.println("metï¿½do remove estoque");
+		if (estoque.size() == 0) {
+			System.out.println("Não existe produtos cadastrados!");
+		} else {
+			System.out.println("Produto não localizado tente novamente");
+		}
+
+		for (ModelProduto produtos : estoque) {
+			if (produtos.getId() == id) {
+
+				int newSaldo = produtos.getSaldo() - saldo;
+
+				produtos.setSaldo(newSaldo);
+				System.out.println("\n================================" + "\nSaldo atual" + "\nid: " + produtos.getId()
+						+ "\nProduto: " + produtos.getName() + "\nSaldo: " + produtos.getSaldo()
+						+ "\n================================");
+
+			}
+
+		}
 	}
 
 	public void mostrarEstoque() {
