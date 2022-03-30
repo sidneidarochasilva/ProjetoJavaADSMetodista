@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import Model.ModelProduto;
 
 public class ControllerEstoque {
-//Teste Sinc
+//Teste Sincronia
 	ArrayList<ModelProduto> estoque = new ArrayList<>();
 
 	public void addProduto(int id, String name, int saldo) {
