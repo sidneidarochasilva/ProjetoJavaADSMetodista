@@ -55,7 +55,13 @@ public class ViewEstoque {
 				break;
 
 			case 4:
-				System.out.println("Informe o id do produto a ser" + " renomeado:");
+				System.out.println("Informe o id do produto a ser renomeado:");
+				id = lerDados.nextInt();
+				System.out.println("Digite o novo nome para o produto com id: " + id);
+				name = lerDados.next();
+
+				produto.renomear(id, name);
+
 				break;
 
 			default:
