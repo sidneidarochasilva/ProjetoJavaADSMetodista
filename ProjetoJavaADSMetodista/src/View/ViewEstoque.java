@@ -19,7 +19,14 @@ public class ViewEstoque {
 
 		do {
 
-			System.out.println("\ndigite a opção desejada");
+			System.out.println("===== CONTROLE DE ESTOQUE =====");
+                        System.out.println("\nDigite a opÃ§Ã£o desejada");
+                        System.out.println("1 - Novo Produto");
+                        System.out.println("2 - Consulta Estoque");
+                        System.out.println("3 - Adicionar Saldo");
+                        System.out.println("4 - Remover Saldo");
+                        System.out.println("5 - Renomear");
+                        System.out.println("6 - Remover Produto");
 			opc = lerDados.nextInt();
 
 			switch (opc) {
@@ -54,7 +61,17 @@ public class ViewEstoque {
 
 				break;
 
-			case 4:
+                        case 4:
+                                System.out.println("Informe o id do produto que deseja remover saldo:");
+                                id = lerDados.nextInt();
+                                
+                                System.out.println("Qual quantidade que deseja remover:");
+                                saldo = lerDados.nextInt();
+                                
+                                produto.removerSaldo(id, saldo);
+                                break;
+                                
+                        case 5:
 				System.out.println("Informe o id do produto a ser renomeado:");
 				id = lerDados.nextInt();
 				System.out.println("Digite o novo nome para o produto com id: " + id);
@@ -63,9 +80,15 @@ public class ViewEstoque {
 				produto.renomear(id, name);
 
 				break;
+                                
+                        case 6:
+                                System.out.println("Informe o id do produto a ser removido");
+                                id = lerDados.nextInt();
+                                
+                                produto.removeProduto(id);
 
 			default:
-				System.out.println("Aplicação encerrada");
+				System.out.println("Aplicaï¿½ï¿½o encerrada");
 
 			}
 

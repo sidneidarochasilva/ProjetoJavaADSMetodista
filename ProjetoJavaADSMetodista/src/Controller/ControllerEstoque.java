@@ -29,9 +29,9 @@ public class ControllerEstoque {
 	public void renomear(int id, String name) {
 
 		if (estoque.size() == 0) {
-			System.out.println("Não existe produtos cadastrados!");
+			System.out.println("Nï¿½o existe produtos cadastrados!");
 		} else {
-			System.out.println("Produto não localizado tente novamente");
+			System.out.println("Produto nï¿½o localizado tente novamente");
 		}
 
 		for (ModelProduto produtos : estoque) {
@@ -51,9 +51,9 @@ public class ControllerEstoque {
 	public void adicionarSaldo(int id, int saldo) {
 
 		if (estoque.size() == 0) {
-			System.out.println("Não existe produtos cadastrados!");
+			System.out.println("Nï¿½o existe produtos cadastrados!");
 		} else {
-			System.out.println("Produto não localizado tente novamente");
+			System.out.println("Produto nï¿½o localizado tente novamente");
 		}
 
 		for (ModelProduto produtos : estoque) {
@@ -75,9 +75,9 @@ public class ControllerEstoque {
 	public void removerSaldo(int id, int saldo) {
 
 		if (estoque.size() == 0) {
-			System.out.println("Não existe produtos cadastrados!");
+			System.out.println("NÃ£o existe produtos cadastrados!");
 		} else {
-			System.out.println("Produto não localizado tente novamente");
+			System.out.println("Produto nÃ£o localizado tente novamente");
 		}
 
 		for (ModelProduto produtos : estoque) {
@@ -97,9 +97,9 @@ public class ControllerEstoque {
 
 	public void mostrarEstoque() {
 		if (estoque.size() == 0) {
-			System.out.println("Não existe produtos cadastrados!");
+			System.out.println("Nï¿½o existe produtos cadastrados!");
 		} else {
-			System.out.println("Produto não localizado tente novamente");
+			System.out.println("Produto nï¿½o localizado tente novamente");
 		}
 
 		for (ModelProduto produtos : estoque) {
