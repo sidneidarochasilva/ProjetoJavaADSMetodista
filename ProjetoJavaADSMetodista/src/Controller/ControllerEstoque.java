@@ -97,15 +97,14 @@ public class ControllerEstoque {
 
 	public void mostrarEstoque() {
 		if (estoque.size() == 0) {
-			System.out.println("Nï¿½o existe produtos cadastrados!");
+			System.out.println("Não existe produtos cadastrados!");
 		} else {
-			System.out.println("Produto nï¿½o localizado tente novamente");
-		}
-
-		for (ModelProduto produtos : estoque) {
-			System.out.println("\n================================\n" + " || ESTOQUE ATUAL || "
-					+ "\n================================" + "\nid: " + produtos.getId() + "\nProduto: "
-					+ produtos.getName() + "\nSaldo: " + produtos.getSaldo() + "\n================================");
+			System.out.println("\n================================" + " \n|| ESTOQUE ATUAL || "
+					+ "\n================================");
+			for (ModelProduto produtos : estoque) {
+				System.out.println("\n================================" + "\nid: " + produtos.getId() + "\nProduto: "
+						+ produtos.getName() + "\nSaldo: " + produtos.getSaldo());
+			}
 		}
 
 	}
