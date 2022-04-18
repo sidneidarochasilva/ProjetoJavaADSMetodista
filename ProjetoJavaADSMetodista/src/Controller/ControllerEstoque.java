@@ -97,7 +97,7 @@ public class ControllerEstoque {
 
 	public void mostrarEstoque() {
 		if (estoque.size() == 0) {
-			System.out.println("Não existe produtos cadastrados!");
+			System.out.println("Nï¿½o existe produtos cadastrados!");
 		} else {
 			System.out.println("\n================================" + " \n|| ESTOQUE ATUAL || "
 					+ "\n================================");
@@ -108,5 +108,12 @@ public class ControllerEstoque {
 		}
 
 	}
+        
+        public void Encerrar(){
+        
+            System.runFinalization();
+            
+            
+        }
 
 }

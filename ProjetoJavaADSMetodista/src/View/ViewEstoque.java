@@ -6,7 +6,7 @@ import Controller.ControllerEstoque;
 
 public class ViewEstoque {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 
 		ControllerEstoque produto = new ControllerEstoque();
 
@@ -16,6 +16,7 @@ public class ViewEstoque {
 		String name;
 		int saldo;
 		int opc = 0;
+                
 
 		do {
 
@@ -27,6 +28,7 @@ public class ViewEstoque {
 			System.out.println("4 - Remover Saldo");
 			System.out.println("5 - Renomear");
 			System.out.println("6 - Remover Produto");
+                        System.out.println("7 - Encerrar Sistema");
 			opc = lerDados.nextInt();
 
 			switch (opc) {
@@ -86,13 +88,16 @@ public class ViewEstoque {
 				id = lerDados.nextInt();
 
 				produto.removeProduto(id);
-
-			default:
-				System.out.println("Aplica��o encerrada");
+                                
+                                break;
+                        case 7:
+                                System.out.println("Encerrando aplicação...");
+                                Thread.sleep(2000);
+                                produto.Encerrar();
 
 			}
 
-		} while (opc <= 4);
+		} while (opc <= 6);
 
 		// System.out.printf("REMOVA UM PRODUTO POR ID");
 		// id = lerDados.nextInt();
